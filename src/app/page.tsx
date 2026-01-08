@@ -70,13 +70,11 @@ export default function Home() {
     }
 
     setSearchResults(
-      [...DATA]
-        .filter(
-          (item: Item) =>
-            item.title.toLocaleLowerCase().includes(trimmedQuery) ||
-            item.description.toLocaleLowerCase().includes(trimmedQuery)
-        )
-        .map((item) => item)
+      [...DATA].filter(
+        (item: Item) =>
+          item.title.toLocaleLowerCase().includes(trimmedQuery) ||
+          item.description.toLocaleLowerCase().includes(trimmedQuery)
+      )
     );
   };
 
